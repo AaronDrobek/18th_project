@@ -14,16 +14,33 @@ router.get("/", function(req,res){
 
 });
 
+router.get("/collection", function(req,res){
+
+  Pens.find({})
+  .then(function(pens){
+    res.render("collection", {users: pens});
+  })
 
 
-
-
-//   router.get("/", function(req,res){
+});
 //
-// let users = db.collection("Pens");
-// console.log(users);
-//   res.render("collection", data);
-//   });
+// router.get("/userData/id", function(req,res){
+//
+//   Pens.find({})
+//   .then(function(pens){
+//     res.render("", {users: pens});
+//   })
+//
+//
+// });
+
+
+
+  //
+  // router.get("/", function(req,res){
+  //
+  // res.render("collection");
+  // });
 
 
 

@@ -12,7 +12,10 @@ body{
   width: 100vw;
   height: 60vw;
 }
-
+.individual a{
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
 .edit{
   width: 20vw;
   display: flex;
