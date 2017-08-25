@@ -1,20 +1,30 @@
-<div class="data">
-
-<form class="edit" action="/edit" method="post">
-  <input type="text" name="name" value="" placeholder="Name"><br>
-  <input type="text" name="length" value="" placeholder="Length"><br>
-  <input type="text" name="color" value="" placeholder="Color"><br>
-  <input type="text" name="writingType" value="" placeholder="Writing Type"><br>
-  <input type="text" name="activation" value="" placeholder="Activation"><br>
-  <input type="text" name="inkColor" value="" placeholder="Ink Color"><br>
+<div class="data_edit">
+<h1>Edit Pen Profile</h1>
+<form class="edit" action="/edit/:name" method="post">
+  {{#users}}
+  <h4>Make Model</h4>
+  <input type="text" name="name" value="{{name}}" placeholder="Name"><br>
+  <h4>Lenth in Inches</h4>
+  <input type="text" name="length" value="{{length}}" placeholder="Length"><br>
+  <h4>Pen Color</h4>
+  <input type="text" name="color" value="{{color}}" placeholder="Color"><br>
+  <h4>Writing Type</h4>
+  <input type="text" name="writingType" value="{{writingType}}" placeholder="Writing Type"><br>
   <p>Description</p>
-  <input type="text" name="material" value="" placeholder="Material"><br>
-  <input type="text" name="refillabble" value=""placeholder="Refillable True False"><br>
-  <input type="text" name="weight" value="" placeholder="Weight"><br>
-  <input type="text" name="price" value="" placeholder="Price">
+  <h4>Activation</h4>
+  <input type="text" name="activation" value="{{activation}}" placeholder="Activation"><br>
+  <h4>Ink Color</h4>
+  <input type="text" name="inkColor" value="{{inkColor}}" placeholder="Ink Color"><br>
 
-
-    <button type="submit" name="button">submit</button>
-
-</div>
+  <h4>Material</h4>
+  <input type="text" name="material" value="{{material}}" placeholder="Material"><br>
+  <h4>Refillable (True/False)</h4>
+  <input type="text" name="refillable" value="{{refillable}}"placeholder="Refillable True False"><br>
+  <h4>Weight in oz.</h4>
+  <input type="text" name="weight" value="{{weight}}" placeholder="Weight"><br>
+  <h4>Price in U.S.D</h4>
+  <input type="text" name="price" value="{{price}}" placeholder="Price">
+  <button type="submit" name="button">submit</button>
+  {{/users}}
 </form>
+</div>

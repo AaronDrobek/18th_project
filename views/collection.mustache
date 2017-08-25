@@ -1,17 +1,28 @@
 {{#users}}
 <div class="individual">
 
-<a href="/userData/id">
-  {{name}}
-  {{length}}
-  {{color}}
-  {{writingType}}
-  {{activation}}
-  {{inkcolor}}
-  {{material}}
-  {{refill}}
-  {{weight}}
-  {{price}}
+<a href="/userData">
+  <h4>
+  Make and Model: {{name}}<br>
+  Length in Inches:{{length}}<br>
+  Color:{{color}}<br>
+  Writing type:{{writingType}}<br>
+  Description:<br>{{#description}}
+  Activation:{{activation}}<br>
+  Ink Color:{{inkColor}}<br>
+  Material:{{material}}<br>
+                    {{/description}}
+  Refillable:{{refillable}}<br>
+  Weight in oz.{{weight}}<br>
+  U.S.D.{{price}}
+</h4>
+  <br>
 </a>
+<form class="delete" action="/delete" method="post">
+  <button type="submit" name="delete" value ="{{name}}">Delete</button>
+</form>
+
+    <a href="/edit/{{name}}"><button  name="edit" value ="">Edit</button></a>
+
 </div>
 {{/users}}

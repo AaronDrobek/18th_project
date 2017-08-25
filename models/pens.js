@@ -11,9 +11,10 @@ const pensSchema = new Schema({
   color: {type: String},
   writingType: {type: String},
   description:[{
-    activation: {type: String},
-    inkColor: {type: String},
-    material: {type: String}
+    activation: String,
+    inkColor: String,
+    material: String
+
   }],
   refillable: {type: Boolean},
   weight: {type: Number},
